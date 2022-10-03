@@ -1,0 +1,15 @@
+spin_version = "1"
+authors = ["Richard Lee <ruli3956@uni.sydney.edu.au>"]
+description = "Research work for Bachelor of Science (Honours) at the University of Sydney"
+name = "richard-research"
+trigger = { type = "http", base = "/" }
+version = "1.0.0"
+
+[[component]]
+source = "opt/wasi-python/bin/python3.wasm"
+id = "python-hello"
+files = [{ source = "code", destination = "/code" }, { source = "opt", destination = "/opt" }]
+environment = { PYTHONHOME = "/opt/wasi-python/lib/python3.11", PYTHONPATH = "/opt/wasi-python/lib/python3.11" }
+[component.trigger]
+route = "/hello"
+executor = { type = "wagi", argv = "${SCRIPT_NAME} /code/env.py ${SCRIPT_NAME} ${ARGS}" }
