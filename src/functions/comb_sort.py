@@ -16,10 +16,10 @@ def comb_sort(sort_arr):
                 
     return num
 
-def comb_sort_test():
+def comb_sort_test(len_num, max_number):
     list = []
-    for i in range(1000):
-        list.append(random.randint(0, 1000))
+    for i in range(len_num):
+        list.append(random.randint(0, max_number))
 
     start = time.time()
     # -------------- Function start --------------

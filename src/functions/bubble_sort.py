@@ -21,10 +21,10 @@ def bubble_sort(arr):
 
     return sort_list
 
-def bubble_sort_test():
+def bubble_sort_test(len_num, max_number):
     list = []
-    for i in range(1000):
-        list.append(random.randint(0, 1000))
+    for i in range(len_num):
+        list.append(random.randint(0, max_number))
 
     start = time.time()
     # -------------- Function start --------------

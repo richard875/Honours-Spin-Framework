@@ -27,10 +27,10 @@ def bitonic_sort_algorithm(sort_arr, l, cnt, d):
 def bitonic_sort(a):
     return bitonic_sort_algorithm(a, 0, len(a), 1)
 
-def bitonic_sort_test():
+def bitonic_sort_test(len_num, max_number):
     list = []
-    for i in range(1000):
-        list.append(random.randint(0, 1000))
+    for i in range(len_num):
+        list.append(random.randint(0, max_number))
 
     start = time.time()
     # -------------- Function start --------------
