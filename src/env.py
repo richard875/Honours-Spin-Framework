@@ -1,10 +1,12 @@
 import os
 import cgi
-# from benchmarkPolybench.index import main
+
+from tests import main
 
 print('Content-Type: text/plain; charset=UTF-8')
-print('Status: 404')
+print('Status: 200')
 print()
 
-print('Hello, from Python!')
 
+print('Hello, from Python!')
+main()
