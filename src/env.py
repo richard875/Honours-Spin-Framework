@@ -10,4 +10,4 @@ print()
 
 print('Experiment 1: Benchmark')
 print('=======================')
-main()
+test, total_time = main()
