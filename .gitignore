@@ -1,5 +1,3 @@
 _scratch
 __pycache__
 .DS_Store
-
-src/benchmark-polybench/compiled
