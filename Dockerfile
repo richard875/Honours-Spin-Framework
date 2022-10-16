@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y curl build-essential libssl-dev pkg-con
 ADD ./docker/start.sh /
 RUN chmod +x ./docker/start.sh
 
-EXPOSE 3000
-
 CMD ["./docker/start.sh"]
+
+# Build: docker build -t spin-experiment .
+# Run: docker run -p 5000:3000 spin-experiment
