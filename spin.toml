@@ -7,9 +7,18 @@ version = "1.0.0"
 
 [[component]]
 source = "opt/wasi-python/bin/python3.wasm"
-id = "python-hello"
+id = "python-sorting"
 files = [{ source = "src", destination = "/src" }, { source = "opt", destination = "/opt" }]
 environment = { PYTHONHOME = "/opt/wasi-python/lib/python3.11", PYTHONPATH = "/opt/wasi-python/lib/python3.11" }
 [component.trigger]
-route = "/hello"
+route = "/sorting"
 executor = { type = "wagi", argv = "${SCRIPT_NAME} /src/env.py ${SCRIPT_NAME} ${ARGS}" }
+
+[[component]]
+source = "opt/wasi-python/bin/python3.wasm"
+id = "python-other"
+files = [{ source = "src", destination = "/src" }, { source = "opt", destination = "/opt" }]
+environment = { PYTHONHOME = "/opt/wasi-python/lib/python3.11", PYTHONPATH = "/opt/wasi-python/lib/python3.11" }
+[component.trigger]
+route = "/other"
+executor = { type = "wagi", argv = "${SCRIPT_NAME} /src/others.py ${SCRIPT_NAME} ${ARGS}" }
